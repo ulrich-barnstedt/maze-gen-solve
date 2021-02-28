@@ -11,7 +11,7 @@ obj.colored = {
     passedMiddle : colors.BgBlue + obj.middleChar + colors.reset ,
     at : colors.BgGreen + obj.empty + colors.reset,
     passed : colors.BgBlue + obj.empty + colors.reset,
-    goal : colors.FgRed + obj.middleChar + colors.reset
+    goal : colors.BgRed + obj.middleChar + colors.reset
 }
 
 module.exports = obj;

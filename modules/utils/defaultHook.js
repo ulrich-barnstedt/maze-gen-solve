@@ -5,5 +5,6 @@ module.exports = async (map) => {
     cursor.move(0, 0);
     process.stdout.write(maze.stringify(map));
 
-    await sleep.async(1);
+    //Remove comment for slow speed
+    //await sleep.async(1);
 }
