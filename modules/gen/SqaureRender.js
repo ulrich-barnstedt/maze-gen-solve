@@ -19,6 +19,7 @@ class SquareRender {
         }
 
         this.isGoal = false;
+        this.wall = !(this.open.up || this.open.right || this.open.down || this.open.left);
         this.visited = false;
     }
 
@@ -36,6 +37,7 @@ class SquareRender {
     }
 
     middleChar () {
+        if (this.wall) return config.char;
         if (this.isGoal) return config.colored.goal;
 
         switch (this.bg.center) {
@@ -58,8 +60,9 @@ class SquareRender {
     }
 
     drawL3 () {
+        let str = `${config.char}${this.charProcess("down")}${config.char}`
         this.seen();
-        return `${config.char}${this.charProcess("down")}${config.char}`;
+        return str;
     }
 
     markGoal () {
