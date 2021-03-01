@@ -102,6 +102,8 @@ class SquareRender {
     }
 
     unvisit () {
+        this.visited = false;
+
         for (let key in this.bg) {
             this.bg[key] = 0;
         }
