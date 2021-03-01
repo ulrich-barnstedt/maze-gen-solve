@@ -97,6 +97,16 @@ class SquareRender {
                     break;
             }
         });
+
+        return this;
+    }
+
+    unvisit () {
+        for (let key in this.bg) {
+            this.bg[key] = 0;
+        }
+
+        return this;
     }
 }
 
